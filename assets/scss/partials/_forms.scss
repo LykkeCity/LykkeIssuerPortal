@@ -1,0 +1,286 @@
+.checkbox,
+.radio {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 0 !important;
+
+  @extend %noselect;
+
+  &__control {
+    position: absolute;
+    right: 100%;
+    opacity: 0;
+    visibility: hidden;
+
+    &:checked {
+      ~ .control-label {
+        &:before {
+          background: $primary !important;
+          border-color: $primary !important;
+        }
+
+        &:after {
+          opacity: 1 !important;
+          visibility: visible !important;
+
+          @include transform(scale(1));
+        }
+      }
+    }
+
+    &[disabled] {
+      ~ .control-label {
+        &:before {
+          background: $gray-5 !important;
+          border-color: $gray-25 !important;
+        }
+
+        &:after {
+          color: $gray-25 !important;
+        }
+      }
+    }
+  }
+
+  &__label, label {
+    position: relative;
+
+    @include rem(padding, 5px 0 5px 30px);
+
+    &:hover {
+      &:before {
+        border-color: $gray-25;
+      }
+    }
+
+    &:before {
+      content: '';
+      border: 1px solid $gray-25;
+      position: absolute;
+      left: 0;
+
+      @include rem(top, 5px);
+      @include rem(width, 20px);
+      @include rem(height, 20px);
+
+      @include transition(background $transition-default, border $transition-default);
+    }
+
+    &:after {
+      content: '';
+      color: $white;
+      position: absolute;
+
+      @include transform(scale(0));
+      @include transition(opacity $transition-default, visibility $transition-default, transform $transition-default);
+    }
+  }
+}
+
+.checkbox {
+  &__label, label {
+    &:before {
+      @include border-radius(4px);
+    }
+
+    &:after {
+      font-family: 'icon' !important;
+      color: $white;
+      content: "\e90b";
+      left: 0;
+      text-align: center;
+
+      @include rem(width, 20px);
+      @include rem(top, 6px);
+      @include rem(font-size, 16px);
+    }
+  }
+}
+
+.radio {
+  &__control {
+    &[disabled] {
+      ~ .control-label {
+        &:after {
+          background: $gray-25 !important;
+        }
+      }
+    }
+  }
+
+  &__label, label {
+    &:before {
+      background: $white;
+
+      @include border-radius(100px);
+    }
+
+    &:after {
+      background: $white;
+
+      @include border-radius(100px);
+      @include rem(width, 6px);
+      @include rem(height, 6px);
+      @include rem(top, 12px);
+      @include rem(left, 7px);
+    }
+  }
+}
+
+.form_header {
+  @include rem(padding, 3px 0 12px);
+  @include clearfix;
+
+  h5 {
+    line-height: 1.9;
+    margin-bottom: 0;
+
+    @include rem(font-size, 21px);
+  }
+
+  .asset_link__desc {
+    @include rem(margin-bottom, 4px);
+  }
+
+  &__switch {
+    float: right;
+
+    @include rem(margin-top, 6px);
+
+    .radio + .radio,
+    .checkbox + .checkbox {
+      @include rem(margin-left, 25px);
+    }
+  }
+
+  @media all and (max-width: 370px) {
+    &__switch {
+      margin-top: 2px;
+
+      .radio, .checkbox {
+        display: block;
+        margin: 0 !important;
+      }
+    }
+  }
+}
+
+.control-label {
+  @include rem(margin-bottom, 15px);
+
+  .btn {
+    @include rem(margin, -3px 0);
+  }
+}
+
+.form-group {
+  @include rem(margin-bottom, 24px);
+}
+
+textarea.form-control {
+  min-height: 170px;
+
+  @include rem(padding, 16px 20px);
+}
+
+.form-control {
+  @include rem(padding-left, 20px);
+  @include rem(padding-right, 20px);
+}
+
+.form_fieldset {
+  @include rem(margin-bottom, 35px);
+}
+
+.form_submit {
+  @include rem(padding, 24px 0);
+
+  .checkbox, .radio {
+    @include rem(padding, 10px 0);
+  }
+
+  .btn {
+    @include rem(padding-left, 40px);
+    @include rem(padding-right, 40px);
+  }
+
+  @media all and (max-width: $screen-landscape) {
+    .text-right {
+      text-align: left !important;
+    }
+
+    .btn {
+      margin-top: 10px;
+    }
+  }
+
+  @media all and (max-width: $screen-mobile-tiny) {
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+.fileupload_preview {
+  .asset_link__icon,
+  &__img {
+    float: right;
+    margin-right: 0;
+
+    @include rem(margin-left, 15px);
+  }
+
+  .asset_icon {
+    @include rem(width, 40px);
+    @include rem(height, 40px);
+    @include rem(line-height, 41px);
+    @include rem(font-size, 13px);
+  }
+
+  &__img {
+    border-radius: $border-radius;
+    box-shadow: inset 0 0 0 1px #CFD2D7;
+
+    img {
+      border-radius: $border-radius;
+    }
+  }
+  
+  &__info {
+    overflow: hidden;
+    text-align: right;
+  }
+
+  &__title {
+    @include rem(margin-bottom, 2px);
+  }
+
+  .btn--link {
+    font-size: 16px;
+    color: rgba($secondary, .6);
+    letter-spacing: 0;
+
+    @include rem(font-size, 16px);
+    @include rem(line-height, 24px);
+  }
+}
+
+.btn--link {
+  padding: 0 !important;
+  background: transparent !important;
+  color: inherit;
+  font-weight: normal;
+
+  &:hover {
+    color: inherit !important;
+  }
+}
+
+.form-control {
+  &--sm {
+    @include rem(height, 42px);
+  }
+}

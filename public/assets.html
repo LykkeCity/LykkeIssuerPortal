@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 ie8"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lykke - anyone can trade</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="css/vendor/bootstrap-custom.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--[if lte IE 9]>
+      <script type="text/javascript" src="js/vendor/html5shiv.js"></script>
+    <![endif]-->
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-68151354-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-2 col-sm-3"><a href="/" class="logo header__logo">
+        <img src="img/issuer_portal/ip_logo.png" height="50" alt="lykke_logo"/>
+        <span class="header__title"><b>Issuer</b>Portal</span>
+      </a></div>
+      <div class="col-xs-10 col-sm-9 col-md-6 text-center">
+        <button type="button" class="navbar-toggle collapsed btn btn--stroke pull-right" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <div class="t-simulate">
+            <div class="t-row">
+              <div class="t-cell">
+
+                <ul class="nav nav--header">
+                  <li>
+                    <a href="#">My wallets</a>
+                  </li>
+                  <li>
+                    <a href="#">My assets</a>
+                    <a type="button" class="btn btn-circle new-project-button btn-sm" href="/Project/Create">+</a>
+                  </li>
+                </ul>
+                <a href="https://wiki.lykkex.com/start?do=login" class="visible-xs-inline-block visible-sm-inline-block btn">Sign In</a>
+              </div>
+            </div>
+          </div>
+          <ul class="social social--header visible-xs visible-sm">
+            <li><a href="https://www.facebook.com/groups/542506412568917/" target="_blank" class="social__item"><i class="icon icon--fb_simple"></i></a></li>
+            <li><a href="https://twitter.com/LykkeCity" target="_blank" class="social__item"><i class="icon icon--tw"></i></a></li>
+            <li><a href="http://instagram.com/lykkecity" target="_blank" class="social__item"><i class="icon icon--instagram"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UCmMYipGdKMF0kzfaE-PXsNQ" target="_blank" class="social__item"><i class="icon icon--youtube"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/lykke-ag" target="_blank" class="social__item"><i class="icon icon--linkedin-icn"></i></a></li>
+            <li><a href="https://www.reddit.com/r/lykke/" target="_blank" class="social__item"><i class="icon icon--reddit"></i></a></li>
+            <li><a href="https://t.co/TmjMYnQD7T" target="_blank" class="social__item"><i class="icon icon--telegram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-3 hidden-xs hidden-sm">
+        <a href="https://wiki.lykkex.com/start?do=login" class="btn btn-link pull-right">Sign In</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="content">
+  <section class="section">
+    <div class="container">
+      <div class="section_header">
+        <h1 class="h2 pull-left">My assets</h1>
+        <div class="section_header__tabs tabs_stack pull-right">
+          <div class="tab_item tab_item--active"><a class="tab_item__link" href="">Active &middot; 5</a></div>
+          <div class="tab_item"><a class="tab_item__link" href="">Drafts &middot; 1</a></div>
+          <div class="tab_item"><a class="tab_item__link" href="">Recycle &middot; 1</a></div>
+        </div>
+      </div>
+
+      <div class="assets_list_header">
+        <button class="assets_list_header__button btn"><i class="icon icon--add"></i> <span class="hidden-xs">New Asset</span></button>
+        <div class="assets_list_header__tags assets_list_tags">
+          <a href="" class="assets_list_tag assets_list_tag--active">All assets</a>
+          <a href="" class="assets_list_tag">
+            <span class="check check--gray"></span>
+            Unissued &middot; 1
+          </a>
+          <a href="" class="assets_list_tag">
+            <span class="check check--primary"></span>
+            Issued &middot; 1
+          </a>
+          <a href="" class="assets_list_tag">
+            <span class="check check--yellow"></span>
+            On review &middot; 1
+          </a>
+          <a href="" class="assets_list_tag">
+            <span class="check check--green"></span>
+            Tradable &middot; 1
+          </a>
+        </div>
+      </div>
+
+      <div class="assets_list">
+        <div class="card card--preview">
+          <div class="issuer__img">
+            <a href=""><img src="img/assets/bitcoin.png" width="48" alt=""></a>
+          </div>
+          <div class="card__body">
+            <div class="card__header">
+              <div class="issuer">
+                <div class="issuer__content">
+
+                  <div class="row">
+                    <div class="col-xs-9">
+                      <div class="issuer__name"><a href="">Bitcoin</a></div>
+                    </div>
+                    <div class="col-xs-9 col-sm-3 text-right">
+                      <div class="card__sum h3">0.00 coins</div>
+                    </div>
+                    <div class="col-xs-3 col-sm-3 card__status">
+                      <span class="label label--text label--gray">not issued</span>
+                    </div>
+                    <div class="col-xs-12 col-sm-9">
+                      <div class="address_code">
+                        <div class="address_code__wrapper">
+                          <span>2NAmtRw32LvymjsCx1Wdo8i42v49U6tHDEw</span>
+                          <button class="btn btn--icon copy_code" type="button" title="Copy code">
+                            <i class="icon icon--copy"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="card__desc">
+              <span class="label label--gray">unissued</span>
+              <span class="label label--text label--gray">Created: 11.01.2017</span>
+              <span class="label label--text label--gray">Updated: 16.01.2017</span>
+            </div>
+            <div class="card__footer">
+              <div class="card__actions">
+                <a href="" class="action_link pull-right"><i class="icon icon--trash"></i> Recycle asset</a>
+                <a href="" class="action_link">View details</a>
+                &middot;
+                <a href="" class="action_link">Issue coins</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card card--preview">
+          <div class="issuer__img">
+            <a href=""><img src="img/assets/bitcoin.png" width="48" alt=""></a>
+          </div>
+          <div class="card__body">
+            <div class="card__header">
+
+              <div class="issuer">
+                <div class="issuer__content">
+
+                  <div class="row">
+                    <div class="col-xs-9">
+                      <div class="issuer__name"><a href="">Bitcoin</a></div>
+                    </div>
+                    <div class="col-xs-9 col-sm-3 text-right">
+                      <div class="card__sum h3">0.00 coins</div>
+                    </div>
+                    <div class="col-xs-3 col-sm-3 card__status">
+                      <span class="label label--text label--gray">not issued</span>
+                    </div>
+                    <div class="col-xs-12 col-sm-9">
+                      <div class="address_code">
+                        <div class="address_code__wrapper">
+                          <a href="/">2NAmtRw32LvymjsCx1Wdo8i42v49U6tHDEw</a>
+                          <button class="btn btn--icon copy_code" type="button" title="Copy code">
+                            <i class="icon icon--copy"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="card__desc">
+              <span class="label label--yellow">On review</span>
+              <span class="label label--text label--gray">Created: 11.01.2017</span>
+              <span class="label label--text label--gray">Updated: 16.01.2017</span>
+            </div>
+            <div class="card__footer">
+              <div class="card__actions">
+                <a href="" class="action_link pull-right"><i class="icon icon--trash"></i> Recycle asset</a>
+                <a href="" class="action_link">View details</a>
+                &middot;
+                <a href="" class="action_link">Issue coins</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card card--preview">
+          <div class="issuer__img">
+            <a href=""><img src="img/assets/bitcoin.png" width="48" alt=""></a>
+          </div>
+          <div class="card__body">
+            <div class="card__header">
+
+              <div class="issuer">
+                <div class="issuer__content">
+
+                  <div class="row">
+                    <div class="col-xs-9">
+                      <div class="issuer__name"><a href="">200 XRP (Ripple CryptoCurrencies)</a></div>
+                    </div>
+                    <div class="col-xs-9 col-sm-3 text-right">
+                      <div class="card__sum h3">240,000.00 XRP200</div>
+                    </div>
+                    <div class="col-xs-3 col-sm-3 card__status">
+                      <span class="label label--text label--gray">not issued</span>
+                    </div>
+                    <div class="col-xs-12 col-sm-9">
+                      <div class="address_code">
+                        <div class="address_code__wrapper">
+                          <a href="/">2NAmtRw32LvymjsCx1Wdo8i42v49U6tHDEw</a>
+                          <button class="btn btn--icon copy_code" type="button" title="Copy code">
+                            <i class="icon icon--copy"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="card__desc">
+              <span class="label label--green">Tradable</span>
+              <span class="label label--text label--gray">Created: 11.01.2017</span>
+              <span class="label label--text label--gray">Updated: 16.01.2017</span>
+            </div>
+            <div class="card__footer">
+              <div class="card__actions">
+                <a href="" class="action_link pull-right"><i class="icon icon--trash"></i> Recycle asset</a>
+                <a href="" class="action_link">View details</a>
+                &middot;
+                <a href="" class="action_link">Issue coins</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card card--preview">
+          <div class="issuer__img">
+            <a href=""><img src="img/assets/bitcoin.png" width="48" alt=""></a>
+          </div>
+          <div class="card__body">
+            <div class="card__header">
+
+              <div class="issuer">
+                <div class="issuer__content">
+
+                  <div class="row">
+                    <div class="col-xs-9">
+                      <div class="issuer__name"><a href="">9242 Roosevelt</a></div>
+                    </div>
+                    <div class="col-xs-9 col-sm-3 text-right">
+                      <div class="card__sum h3">680,000.00 Teddy9242</div>
+                    </div>
+                    <div class="card__status col-xs-3 col-sm-3">
+                      <span class="label label--text label--gray">not issued</span>
+                    </div>
+                    <div class="col-xs-12 col-sm-9">
+                      <div class="address_code">
+                        <div class="address_code__wrapper">
+                          <a href="/">2NAmtRw32LvymjsCx1Wdo8i42v49U6tHDEw</a>
+                          <button class="btn btn--icon copy_code" type="button" title="Copy code">
+                            <i class="icon icon--copy"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="card__desc">
+              <span class="label label--primary">Issued</span>
+              <span class="label label--text label--gray">Created: 11.01.2017</span>
+              <span class="label label--text label--gray">Updated: 16.01.2017</span>
+            </div>
+            <div class="card__footer">
+              <div class="card__actions">
+                <a href="" class="action_link pull-right"><i class="icon icon--trash"></i> Recycle asset</a>
+                <a href="" class="action_link">View details</a>
+                &middot;
+                <a href="" class="action_link">Issue coins</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+</article>
+
+<footer class="footer">
+  <div class="footer__bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-6 text-right pull-right">
+          <div class="clearfix">
+            <ul class="social social--footer_alt">
+              <li><a href="https://lykke.com/" target="_blank"><i class="icon icon--lykke"></i></a></li>
+              <li><a href="https://www.facebook.com/groups/542506412568917/" target="_blank" class="social__item"><i class="icon icon--fb_simple"></i></a></li>
+              <li><a href="https://twitter.com/LykkeCity" target="_blank" class="social__item"><i class="icon icon--tw"></i></a></li>
+              <li><a href="http://instagram.com/lykkecity" target="_blank" class="social__item"><i class="icon icon--instagram"></i></a></li>
+              <li><a href="https://www.youtube.com/channel/UCmMYipGdKMF0kzfaE-PXsNQ" target="_blank" class="social__item"><i class="icon icon--youtube"></i></a></li>
+              <li><a href="https://www.linkedin.com/company/lykke-ag" target="_blank" class="social__item"><i class="icon icon--linkedin-icn"></i></a></li>
+              <li><a href="https://www.reddit.com/r/lykke/" target="_blank" class="social__item"><i class="icon icon--reddit"></i></a></li>
+              <li><a href="https://telegram.me/joinchat/AEGiqkF-_dNaHMwQbRSnAg" target="_blank" class="social__item"><i class="icon icon--telegram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6 text-left">
+          <div class="footer__copy">&copy; Lykke 2016. All rights reserved
+            <span class="middot">&middot;</span>
+            <a href="">Terms of Use</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/vendor/jquery.min.js"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/vendor/fastclick.min.js"></script>
+<script src="js/functions.js"></script>
+
+</body>
+</html>

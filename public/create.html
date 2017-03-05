@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 ie8"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lykke - anyone can trade</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="css/vendor/bootstrap-custom.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--[if lte IE 9]>
+      <script type="text/javascript" src="js/vendor/html5shiv.js"></script>
+    <![endif]-->
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-68151354-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+</head>
+<body class="clear_padding_bottom">
+
+<header class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-2 col-sm-3"><a href="/" class="logo header__logo">
+        <img src="img/issuer_portal/ip_logo.png" height="50" alt="lykke_logo"/>
+        <span class="header__title"><b>Issuer</b>Portal</span>
+      </a></div>
+      <div class="col-xs-10 col-sm-9 col-md-6 text-center">
+        <button type="button" class="navbar-toggle collapsed btn btn--stroke pull-right" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <div class="t-simulate">
+            <div class="t-row">
+              <div class="t-cell">
+
+                <ul class="nav nav--header">
+                  <li>
+                    <a href="#">My wallets</a>
+                  </li>
+                  <li>
+                    <a href="#">My assets</a>
+                    <a type="button" class="btn btn-circle new-project-button btn-sm" href="/Project/Create">+</a>
+                  </li>
+                </ul>
+                <a href="https://wiki.lykkex.com/start?do=login" class="visible-xs-inline-block visible-sm-inline-block btn">Sign In</a>
+              </div>
+            </div>
+          </div>
+          <ul class="social social--header visible-xs visible-sm">
+            <li><a href="https://www.facebook.com/groups/542506412568917/" target="_blank" class="social__item"><i class="icon icon--fb_simple"></i></a></li>
+            <li><a href="https://twitter.com/LykkeCity" target="_blank" class="social__item"><i class="icon icon--tw"></i></a></li>
+            <li><a href="http://instagram.com/lykkecity" target="_blank" class="social__item"><i class="icon icon--instagram"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UCmMYipGdKMF0kzfaE-PXsNQ" target="_blank" class="social__item"><i class="icon icon--youtube"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/lykke-ag" target="_blank" class="social__item"><i class="icon icon--linkedin-icn"></i></a></li>
+            <li><a href="https://www.reddit.com/r/lykke/" target="_blank" class="social__item"><i class="icon icon--reddit"></i></a></li>
+            <li><a href="https://t.co/TmjMYnQD7T" target="_blank" class="social__item"><i class="icon icon--telegram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-3 hidden-xs hidden-sm">
+        <a href="https://wiki.lykkex.com/start?do=login" class="btn btn-link pull-right">Sign In</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article class="content">
+  <section class="section">
+    <div class="container">
+      <div class="section_header">
+        <h1 class="h2 pull-left">My assets</h1>
+
+        <div class="card__actions">
+          <a href="" class="action_link pull-right"><i class="icon icon--save_as_draft"></i> Save as Draft</a>
+          <a href="" class="action_link pull-right"><i class="icon icon--trash"></i> Delete Asset</a>
+          <span class="action_text">Last saved 2 minutes ago</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--yе забыть добавить класс к body (clear_padding_bottom)-->
+
+  <section class="section">
+    <div class="create_asset">
+        <div class="step step--success">
+
+          <div class="step__header step_header">
+            <div class="container">
+              <div class="step__wrapper">
+                <div class="step__index"><span>1</span></div>
+                <div class="step__content">
+                  <div class="step_header">
+                    <div class="step_header__info">
+                      <div class="_hint">Step 1</div>
+                      <div class="_title">Base info</div>
+                    </div>
+
+                    <div class="step_header__values hidden-xs">
+                      <div class="_cell">
+                        <div class="_hint">Asset name</div>
+                        <div class="_value">Designers Lykke</div>
+                      </div>
+                      <div class="_cell">
+                        <div class="_hint">Ticker</div>
+                        <div class="_value">DesignLKK</div>
+                      </div>
+                      <div class="_cell">
+                        <div class="_hint">Type</div>
+                        <div class="_value">Currency</div>
+                      </div>
+                    </div>
+
+                    <div class="step_header__edit">
+                      <button type="button" class="action_link"><i class="icon icon--edit"></i> Edit</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="step__body">
+            <div class="container">
+
+              <div class="step__content">
+                <div class="row">
+                  <div class="col-sm-4">
+
+                    <div class="create_asset__info">
+                      <h3>Base info</h3>
+                      <p>An asset is a form of digital token so-called colored coin. Colored coins follow the idea of “coloring” a specific Bitcoin to be broadcasted over the Bitcoin network. </p>
+                      <p>Start with providing name, icon and brief description of your new asset. It can be anything, from objectives of your company to an idea why the world needs your asset. </p>
+                      <p>Upload PDF-file or provide a link to a memorandum of issuing your asset, that will increase trustworthiness to you and show a real company behind the asset.</p>
+                    </div>
+
+                  </div>
+
+                  <div class="col-sm-7">
+
+                    <div class="create_asset__main">
+                      <form class="create_asset__form form form--default">
+                        <fieldset class="form_fieldset">
+                          <div class="form_header">
+                            <h5>Asset</h5>
+                          </div>
+                          <div class="form-group">
+                            <label for="f1" class="control-label pull-right">10 characters maximum</label>
+                            <label for="f1" class="control-label">Asset name</label>
+                            <input type="text" id="f1" class="form-control" value="DesignLKK">
+                          </div>
+
+                          <div class="form-group">
+                            <label for="f12" class="control-label">Issuer name</label>
+                            <input type="text" id="f12" class="form-control" value="LykkeDesigners">
+                          </div>
+
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <label for="select1" class="control-label">Divisibility <a href="#" class="help_hint btn btn--icon"><i class="icon icon--help_outline"></i></a></label>
+                              <div class="select form-group" data-control="select">
+                                <div class="select__value"><span class="_value">Indivisible</span></div>
+                                <select id="select1" class="form-control select__elem">
+                                  <option>Indivisible</option>
+                                  <option>All2</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <label for="select12" class="control-label">Asset type <a href="#" class="help_hint btn btn--icon"><i class="icon icon--help_outline"></i></a></label>
+                              <div class="select form-group" data-control="select">
+                                <div class="select__value"><span class="_value">Currency</span></div>
+                                <select id="select12" class="form-control select__elem">
+                                  <option>Currency</option>
+                                  <option>All2</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="f21" class="control-label">Description</label>
+                            <textarea name="" id="f21" class="form-control">Designers coins for Lykke</textarea>
+                          </div>
+                        </fieldset>
+
+                        <fieldset class="form_fieldset">
+                          <div class="form_header">
+                            <div class="form_header__switch">
+                              <div class="radio">
+                                <input type="radio" name="radio11" id="radio11" class="radio__control" checked>
+                                <label for="radio11" class="control-label radio__label">URL</label>
+                              </div>
+                              <div class="radio">
+                                <input type="radio" name="radio11" id="radio12" class="radio__control">
+                                <label for="radio12" class="control-label radio__label">PDF-file</label>
+                              </div>
+                            </div>
+                            <h5>Asset URL</h5>
+                          </div>
+
+                          <div class="asset_link_list">
+                            <div class="asset_link">
+                              <div class="asset_link__action">
+                                <div class="fileupload">
+                                  <div class="fileupload_preview">
+                                    <div class="asset_link__icon">
+                                      <div class="asset_icon asset_icon--red">PDF</div>
+                                    </div>
+                                    <div class="fileupload_preview__info">
+                                      <div class="fileupload_preview__title">PDF-file</div>
+                                      <button class="btn btn--link" type="button">upload another file</button>
+                                    </div>
+                                  </div>
+                                  <div class="fileupload__control">
+                                    <!--<input type="file" id="file1" class="fileupload__field">-->
+                                    <!--<button type="button" class="btn btn-sm btn&#45;&#45;default fileupload__btn">Upload image</button>-->
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="asset_link__info">
+                                <div class="asset_link__title">PDF-file</div>
+                                <div class="asset_link__desc">File must be less than 10MB</div>
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+
+                        <fieldset class="form_fieldset">
+                          <div class="form_header">
+                            <h5>Asset URL</h5>
+                            <div class="asset_link__desc">Allowed files type: jpg, png ⋅ File must be less than 1MB</div>
+                          </div>
+
+                          <div class="asset_link_list">
+                            <div class="asset_link">
+                              <div class="asset_link__action">
+                                <div class="fileupload">
+                                  <!--
+                                  <div class="fileupload_preview">
+                                    <div class="fileupload_preview__img">
+                                      <img src="http://lorempixel.com/40/40/" alt="fileupload_preview__img">
+                                    </div>
+                                    <div class="fileupload_preview__info">
+                                      <div class="fileupload_preview__title">designLKK-48.png</div>
+                                      <button class="btn btn--link" type="button">upload another file</button>
+                                    </div>
+                                  </div>
+                                  -->
+                                  <div class="fileupload__control">
+                                    <input type="file" id="file1" class="fileupload__field">
+                                    <button type="button" class="btn btn-sm btn--default fileupload__btn">Upload image</button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="asset_link__info">
+                                <div class="asset_link__title">Small resolution</div>
+                                <div class="asset_link__desc">48 × 48 px</div>
+                              </div>
+                            </div>
+                            <div class="asset_link">
+                              <div class="asset_link__action">
+                                <div class="fileupload">
+                                  <input type="file" id="file2" class="fileupload__field">
+                                  <button type="button" class="btn btn-sm btn--default">Upload image</button>
+                                </div>
+                              </div>
+                              <div class="asset_link__info">
+                                <div class="asset_link__title">Big resolution</div>
+                                <div class="asset_link__desc">260 × 260 px</div>
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+
+                        <div class="form_submit">
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <div class="checkbox">
+                                <input type="checkbox" name="checkbox1" id="checkbox12" class="radio__control" checked>
+                                <label for="checkbox12" class="control-label checkbox__label">I agree with <a href="">Terms of Use</a></label>
+                              </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 text-right pull-right">
+                              <button type="button" class="btn" disabled>Save Changes</button>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- /// -->
+
+        <div class="step step--active">
+
+          <div class="step__header step_header">
+            <div class="container">
+              <div class="step__wrapper">
+                <div class="step__index"><span>2</span></div>
+                <div class="step__content">
+                  <div class="step_header">
+                    <div class="step_header__info">
+                      <div class="_hint">Step 2</div>
+                      <div class="_title">Generation address</div>
+                    </div>
+
+                    <div class="step_header__values hidden-xs">
+                      <div class="_cell">
+                        <div class="_hint">Asset ID</div>
+                        <div class="_value">AXkedGbAH1XGDpAyAXkedGbAH1XGDpAy</div>
+                      </div>
+                      <div class="_cell">
+                        <div class="_hint">Bitcoin address</div>
+                        <div class="_value">AXkedGbAH1XGDpAyAXkedGbAH1XGDpAy</div>
+                      </div>
+                      <div class="_cell">
+                        <div class="_hint">Colored address</div>
+                        <div class="_value"><a href="">AXkedGbAH1XGDpAyAXkedGbAH1XGDpAy</a></div>
+                      </div>
+                    </div>
+
+                    <div class="step_header__edit">
+                      <button type="button" class="action_link"><i class="icon icon--edit"></i> Edit</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="step__body">
+            <div class="container">
+
+              <div class="step__content">
+                <div class="row">
+                  <div class="col-sm-4">
+
+                    <div class="create_asset__info">
+                      <h3>Generation address</h3>
+                      <p>Your asset address is used for initial storing the volume of your asset, and for storing Bitcoins that will be charged off for signing all the transactions. </p>
+                      <p>Please confirm you are the owner, follow the suggested steps.</p>
+                    </div>
+
+                  </div>
+
+                  <div class="col-sm-7">
+
+                    <div class="create_asset__main">
+                      <form class="create_asset__form form form--default">
+                        <fieldset class="form_fieldset">
+                          <div class="form_header">
+                            <h5>How to confirm address</h5>
+                          </div>
+
+                          <ol>
+                            <li>
+                              <div class="li">Download the Lykke Wallet app from AppStore or GooglePlay:</div>
+
+                              <div class="apps">
+                                <div class="apps_apple"><a href="https://appsto.re/ru/Dwjvcb.i" target="_blank"><img src="img/appstore-badge.svg" alt="appstore" width="168"></a></div>
+                                <div class="apps_google"><a href="https://play.google.com/store/apps/details?id=com.lykkex.LykkeWallet" target="_blank"><img src="img/google-play.svg" alt="googleplay" width="168"></a></div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="li">Go in the Wallets tab and confirm latest address with name ‘Designers coins’.</div>
+                            </li>
+                            <li>
+                              <div class="li">And you can proceed to the next step in creating the asset.</div>
+                            </li>
+                          </ol>
+                        </fieldset>
+
+                        <div class="alert alert--green">
+                          <i class="icon icon--check_circle"></i>
+                          <div class="alert__text">The address has been successfully verified in the application</div>
+                        </div>
+
+                        <fieldset class="form_fieldset">
+                          <div class="form_header">
+                            <h5>Generated data</h5>
+                          </div>
+
+                          <div class="asset_link_list">
+                            <div class="asset_link">
+                              <div class="asset_link__info">
+                                <div class="asset_link__title">Asset ID</div>
+                                <div class="asset_link__desc">
+                                  <div class="address_code">
+                                    <div class="address_code__wrapper">
+                                      <span>2NAmtRw32LvymjsCx1Wdo8i42v49U6tHDEw</span>
+                                      <button class="btn btn--icon copy_code" type="button" title="Copy code">
+                                        <i class="icon icon--copy"></i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="asset_link">
+                              <div class="asset_link__modal">
+                                <a href="#modal_qrcode" class="btn btn--icon" data-toggle="modal">
+                                  <i class="icon icon--qr"></i>
+                                </a>
+                              </div>
+                              <div class="asset_link__info">
+                                <div class="asset_link__title">Bitcoin address</div>
+                                <div class="asset_link__desc">
+                                  <div class="address_code">
+                                    <div class="address_code__wrapper">
+                                      <span>APdn8oY6fLMjRptvJ1jhqCnoGFAFQmdX1R</span>
+                                      <button class="btn btn--icon copy_code" type="button" title="Copy code">
+                                        <i class="icon icon--copy"></i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="asset_link">
+                              <div class="asset_link__modal">
+                                <a href="#modal_qrcode" class="btn btn--icon" data-toggle="modal">
+                                  <i class="icon icon--qr"></i>
+                                </a>
+                              </div>
+                              <div class="asset_link__info">
+                                <div class="asset_link__title">Colored address</div>
+                                <div class="asset_link__desc">
+                                  <div class="address_code">
+                                    <div class="address_code__wrapper">
+                                      <span>2NAmtRw32LvymjsCx1Wdo8i42v49U6tHDEw</span>
+                                      <button class="btn btn--icon copy_code" type="button" title="Copy code">
+                                        <i class="icon icon--copy"></i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+
+                        <div class="form_submit">
+                          <div class="row">
+                            <div class="col-xs-12 col-sm-6 text-right pull-right">
+                              <button type="button" class="btn">Save Changes</button>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- /// -->
+
+      <div class="step">
+
+        <div class="step__header">
+          <div class="container">
+            <div class="step__wrapper">
+              <div class="step__index"><span>3</span></div>
+              <div class="step__content">
+                <div class="_hint">Step 3</div>
+                <div class="_title">Blockchain asset metadata</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="step__body">
+          <div class="container">
+
+            <div class="step__content">
+              <div class="row">
+                <div class="col-sm-4">
+
+                  <div class="create_asset__info">
+                    <h3>Blockchain asset metadata</h3>
+                    <p>Metadata is a JSON file that contains all the information about your asset and it is used for verification of your asset. </p>
+                    <p>A link to the file will be stored on the blockchain. If you would like to place the file on your server, the address should be HTTPS and shorter than 31 characters (including https://).</p>
+                  </div>
+
+                </div>
+
+                <div class="col-sm-7">
+
+                  <div class="create_asset__main">
+                    <form class="create_asset__form form form--default">
+                      <fieldset class="form_fieldset">
+                        <div class="form_header">
+                          <div class="form_header__switch">
+                            <div class="radio">
+                              <input type="radio" name="radio12" id="radio13" class="radio__control">
+                              <label for="radio13" class="control-label radio__label">Issuer Portal</label>
+                            </div>
+                            <div class="radio">
+                              <input type="radio" name="radio12" id="radio14" class="radio__control" checked>
+                              <label for="radio14" class="control-label radio__label">External link</label>
+                            </div>
+                          </div>
+                          <h5>Link to metadata</h5>
+                        </div>
+
+                        <div class="asset_link_list">
+
+                          <!--if "Issuer Portal" radio is checked-->
+                          <div class="asset_link">
+                            <div class="asset_link__info">
+                              <div class="asset_link__title">Link on Issuer Portal</div>
+                              <div class="asset_link__desc">
+                                <div class="address_code">
+                                  <div class="address_code__wrapper">
+                                    <a href="" target="_blank">https://isserportal.lykke.com/assets/designLKK.json</a>
+                                    <button class="btn btn--icon copy_code" type="button" title="Copy code">
+                                      <i class="icon icon--copy"></i>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- / if "Issuer Portal" radio is checked-->
+
+                          <div class="asset_link">
+                            <div class="asset_link__action">
+                              <button type="button" class="btn btn-sm btn--default">Copy<span class="hidden-xs"> to clipboard</span></button>
+                              <button type="button" class="btn btn-sm btn--default ">Download<span class="hidden-xs"> .json</span></button>
+                            </div>
+                            <div class="asset_link__info">
+                              <div class="asset_link__title">JSON</div>
+                              <div class="asset_link__desc">designLKK.json</div>
+                            </div>
+
+                            <div class="asset_link__extend">
+                              <textarea class="form-control" disabled>{     "source_addresses": [          "3Kfotk3zahcW2R94fdXWRtrR7b5Bn98Jy3"       ],    "contract_url": "http://lemon.ad/LEMO-info",    "name_short": "LEMO",     "name": "Lemonade Stand Revenue Share",     "issuer": "The Little Lemonade Stand",     "description": "This token represents a share of ownership in the       little lemonade stand in my street.              Each token grants right to 1% of the monthly profits from my       stand.",     "description_mime": "text/x-markdown; charset=UTF-8",     "type": "CryptoToken",     "divisibility": 4,     "link_to_website": true,     "icon_url": "http://lemon.ad/LEMO/icon.jpg",     "image_url": "http://lemon.ad/LEMO/image.jpg",     "version": "1.0" }</textarea>
+                            </div>
+                          </div>
+
+                          <div class="asset_link">
+                            <div class="asset_link__info">
+                              <div class="asset_link__title">External link</div>
+                              <div class="asset_link__desc">Download .json file and upload on external server</div>
+                            </div>
+
+                            <div class="asset_link__extend">
+                              <div class="form-group">
+                                <div class="row">
+                                  <div class="col-sm-12 col-md-8 col-lg-9">
+                                    <input type="text" class="form-control form-control--sm" value="https://johndoe.com/assets/designLKK.json">
+                                  </div>
+                                  <div class="col-sm-6 col-md-4 col-lg-3 pull-right">
+                                    <button type="button" class="btn btn-sm btn--default btn-block">Check link</button>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="alert alert--red">
+                                <span class="icon icon--fail"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                <div class="alert__text">The address has been successfully verified in the application</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+
+                      <div class="form_submit">
+                        <div class="row">
+                          <div class="col-xs-12 col-sm-6 text-right pull-right">
+                            <button type="button" class="btn">Save Changes</button>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</article>
+
+<footer class="footer">
+  <div class="footer__bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-6 text-right pull-right">
+          <div class="clearfix">
+            <ul class="social social--footer_alt">
+              <li><a href="https://lykke.com/" target="_blank"><i class="icon icon--lykke"></i></a></li>
+              <li><a href="https://www.facebook.com/groups/542506412568917/" target="_blank" class="social__item"><i class="icon icon--fb_simple"></i></a></li>
+              <li><a href="https://twitter.com/LykkeCity" target="_blank" class="social__item"><i class="icon icon--tw"></i></a></li>
+              <li><a href="http://instagram.com/lykkecity" target="_blank" class="social__item"><i class="icon icon--instagram"></i></a></li>
+              <li><a href="https://www.youtube.com/channel/UCmMYipGdKMF0kzfaE-PXsNQ" target="_blank" class="social__item"><i class="icon icon--youtube"></i></a></li>
+              <li><a href="https://www.linkedin.com/company/lykke-ag" target="_blank" class="social__item"><i class="icon icon--linkedin-icn"></i></a></li>
+              <li><a href="https://www.reddit.com/r/lykke/" target="_blank" class="social__item"><i class="icon icon--reddit"></i></a></li>
+              <li><a href="https://telegram.me/joinchat/AEGiqkF-_dNaHMwQbRSnAg" target="_blank" class="social__item"><i class="icon icon--telegram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6 text-left">
+          <div class="footer__copy">&copy; Lykke 2016. All rights reserved
+            <span class="middot">&middot;</span>
+            <a href="">Terms of Use</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Modal -->
+<div class="modal modal--message asset_modal fade" id="modal_qrcode" tabindex="-1" role="dialog">
+
+  <div class="modal_valign">
+    <div class="modal_valign__row">
+      <div class="modal_valign__cell">
+
+        <div class="modal__dialog" role="document">
+          <div class="modal__content">
+            <button type="button" class="close visible-xs" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+            <div class="modal__body">
+              <h3>Address</h3>
+              <div class="tabs_stack">
+                <div class="tab_item tab_item--active"><a class="tab_item__link" href="">Bitcoin</a></div>
+                <div class="tab_item"><a class="tab_item__link" href="">Colored</a></div>
+              </div>
+              <div class="qr_code">
+                <img src="img/gqcode_demo.jpg" alt="gqcode">
+              </div>
+            </div>
+            <div class="modal__footer">
+              <div class="asset_link_list">
+                <div class="asset_link">
+                  <div class="asset_link__info">
+                    <div class="asset_link__title">Bitcoin address</div>
+                    <div class="asset_link__desc">
+                      <div class="address_code">
+                        <div class="address_code__wrapper">
+                          <a href="" target="_blank">APdn8oY6fLMjRptvJ1jhqCnoGFAFQmdX1R</a>
+                          <button class="btn btn--icon copy_code" type="button" title="Copy code">
+                            <i class="icon icon--copy"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="js/vendor/jquery.min.js"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/vendor/fastclick.min.js"></script>
+<script src="js/vendor/clipboard.min.js"></script>
+<script src="js/functions.js"></script>
+
+</body>
+</html>
