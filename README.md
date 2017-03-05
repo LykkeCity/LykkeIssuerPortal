@@ -1,5 +1,5 @@
 # Lykke Issuer Portal
-https://lykkecity.github.io/LykkeIssuerPortal/.
+https://lykkecity.github.io/LykkeIssuerPortal/public/
 
 `npm i`
 
