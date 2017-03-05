@@ -144,6 +144,17 @@
       float: none !important;
     }
 
+    .action_link, .action_text {
+      margin-bottom: 10px;
+      float: none !important;
+      margin-left: 0 !important;
+      margin-right: 10px;
+    }
+
+    .action_text {
+      display: block;
+    }
+
     &__tabs {
       float: none !important;
       margin-bottom: 0;
