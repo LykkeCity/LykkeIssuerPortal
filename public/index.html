@@ -48,8 +48,7 @@
       </button>
       <div class="header_logo">
         <a href="/">
-          <img class="header_logo__img" src="img/issuer_portal_logo.svg" height="40" alt="issuer_portal">
-          <div class="header_logo__title">Issuer<span>Portal</span></div>
+          <img class="header_logo__img" src="img/lykke_new.svg" height="40" alt="lykke_logo">
         </a>
       </div>
     </div>
@@ -57,7 +56,7 @@
     <div class="sidebar_menu__body">
       <ul class="main_projects_list">
         <li class="main_projects_list__item">
-          <a href="https://www.lykke.com/" target="_blank" class="main_projects_list__link">
+          <a href="" class="main_projects_list__link">
             <div class="main_projects_list__img">
               <img src="img/lykke_wallet_logo.svg" alt="lykke_wallet_logo" width="50">
             </div>
@@ -76,9 +75,9 @@
               <img src="img/streams_logo.svg" alt="streams_logo" width="50">
             </div>
             <div class="main_projects_list__content">
-              <div class="main_projects_list__title">Streams</div>
+              <div class="main_projects_list__title">Lykke<span>Streams</span></div>
               <div class="main_projects_list__text">
-                Competition platform. Is helping the great ideas to meet the bright minds
+                Collaboration platform. Here the great ideas meet bright minds
               </div>
             </div>
           </a>
@@ -93,20 +92,6 @@
               <div class="main_projects_list__title">Blockchain<span>Explorer</span></div>
               <div class="main_projects_list__text">
                 Explore the Blockchain. Search transaction, assets, addresses or blocks
-              </div>
-            </div>
-          </a>
-        </li>
-
-        <li class="main_projects_list__item">
-          <a href="" target="_blank" class="main_projects_list__link">
-            <div class="main_projects_list__img">
-              <img src="img/issuer_portal_logo.svg" alt="issuer_portal_logo" width="50">
-            </div>
-            <div class="main_projects_list__content">
-              <div class="main_projects_list__title">Issuer<span>Portal</span></div>
-              <div class="main_projects_list__text">
-                Create and manage your digital assets
               </div>
             </div>
           </a>
@@ -139,12 +124,17 @@
       </div>
       <div class="header__logo header_logo">
         <a href="/">
-          <img class="header_logo__img" src="img/lykke_new.svg" height="36" alt="lykke_logo">
+          <img class="header_logo__img" src="img/streams_logo.png" height="36" alt="lykke_logo">
+          <div class="header_logo__title">Streams</div>
         </a>
       </div>
       <div class="header__actions header_actions pull-right">
+        <div class="header_actions__logout visible-xs pull-right">
+          <a href="/Home/LogOut" class="btn btn--icon btn_logout">
+            <i class="icon icon--exit"></i>
+          </a>
+        </div>
         <div class="header_actions__login header_login pull-right">
-
           <div class="header_user dropdown__control">
             <a href="/Home/SignIn">
               <div class="header_login__title">Sign in</div>
@@ -157,43 +147,23 @@
             </a>
           </div>
 
-          <!--TODO dropdown-->
-          <!-- <div class="dropdown__container">
+          <div class="dropdown__container">
             <ul class="dropdown__nav">
               <li><a href="/Home/LogOut">Sign Out</a></li>
             </ul>
-          </div>-->
-
-        </div>
-
-        <!--TODO search-->
-        <!--
-        <div class="header_actions__search">
-          <button class="btn btn--icon btn_open_search" type="button">
-            <i class="icon icon--search"></i>
-          </button>
-        </div>
-        -->
-      </div>
-    </div>
-
-    <div class="header_search">
-      <div class="container">
-        <div class="header_search__inner">
-          <div class="header_search__buttons">
-            <button type="button" class="btn btn-sm btn--flat hidden-xs btn_close_header">Cancel</button>
-            <button type="button" class="btn btn-sm btn--primary hidden-xs">Search</button>
-            <button type="button" class="btn btn--icon visible-xs btn_close_header">
-              <i class="icon icon--cancel_round"></i>
-            </button>
           </div>
-          <div class="header_search__field">
-            <button class="header_search__btn btn btn--icon" type="button">
-              <i class="icon icon--search"></i>
-            </button>
-            <input type="text" class="form-control" placeholder="Search">
-          </div>
+
         </div>
+        <!-- <div class="header_actions__search">
+           <button class="btn btn&#45;&#45;icon" type="button">
+             <i class="icon icon&#45;&#45;search"></i>
+           </button>
+         </div>
+         <div class="header_actions__notifications">
+           <button class="btn btn&#45;&#45;icon" type="button">
+             <i class="icon icon&#45;&#45;notificaton"></i>
+           </button>
+         </div>-->
       </div>
     </div>
   </header>
@@ -333,7 +303,7 @@
   <div class="footer__bottom">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 col-md-6 text-right pull-right">
+        <div class="col-xs-12 col-md-7 text-right pull-right">
           <div class="clearfix">
             <ul class="social social--footer_alt">
               <li><a href="https://lykke.com/" target="_blank"><i class="icon icon--lykke"></i></a></li>
@@ -347,8 +317,8 @@
             </ul>
           </div>
         </div>
-        <div class="col-xs-12 col-md-6 text-left">
-          <div class="footer__copy">&copy; Lykke 2016. All rights reserved
+        <div class="col-xs-12 col-md-5 text-left">
+          <div class="footer__copy">&copy; Lykke 2017. All rights reserved
             <span class="middot">&middot;</span>
             <a href="">Terms of Use</a>
           </div>
