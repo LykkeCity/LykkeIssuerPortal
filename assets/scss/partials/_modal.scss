@@ -136,3 +136,9 @@
     }
   }
 }
+
+.modal-open article, .modal-open header, .modal-open footer, .modal-open nav.header_nav, .modal-open .site_nav { -webkit-filter: none; filter: none; }
+
+.modal-backdrop.in {
+  opacity: 0.7;
+}
