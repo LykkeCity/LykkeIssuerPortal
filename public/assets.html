@@ -124,8 +124,8 @@
       </div>
       <div class="header__logo header_logo">
         <a href="/">
-          <img class="header_logo__img" src="img/streams_logo.png" height="36" alt="lykke_logo">
-          <div class="header_logo__title">Streams</div>
+          <img class="header_logo__img" src="img/issuer_portal_logo.svg" height="36" alt="lykke_logo">
+          <div class="header_logo__title">Issuer<span>Portal</span></div>
         </a>
       </div>
       <div class="header__actions header_actions pull-right">
@@ -135,9 +135,10 @@
           </a>
         </div>
         <div class="header_actions__login header_login pull-right">
+
           <div class="header_user dropdown__control">
             <a href="/Home/SignIn">
-              <div class="header_login__title">Sign in</div>
+              <div class="header_login__title hidden-xs">Sign in</div>
 
               <!--<div class="header_user__img">
                 <img src="img/user_default.svg" width="40" alt="user_image">
@@ -154,16 +155,6 @@
           </div>
 
         </div>
-        <!-- <div class="header_actions__search">
-           <button class="btn btn&#45;&#45;icon" type="button">
-             <i class="icon icon&#45;&#45;search"></i>
-           </button>
-         </div>
-         <div class="header_actions__notifications">
-           <button class="btn btn&#45;&#45;icon" type="button">
-             <i class="icon icon&#45;&#45;notificaton"></i>
-           </button>
-         </div>-->
       </div>
     </div>
   </header>
@@ -181,39 +172,43 @@
   </div>
 </nav>
 
+<nav class="site_nav">
+  <div class="site_nav__inner">
+    <div class="container">
+      <ul class="header_nav__list nav_list nav_list--alt">
+        <li class="nav_list__item nav_list__item--active"><a href="">Active assets</a></li>
+        <li class="nav_list__item"><a href="">Drafts</a></li>
+        <li class="nav_list__item"><a href="">Recycle</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
 <article class="content">
   <section class="section">
     <div class="container">
-      <div class="section_header">
-        <h1 class="h2 pull-left">My assets</h1>
-        <div class="section_header__tabs tabs_stack pull-right">
-          <div class="tab_item tab_item--active"><a class="tab_item__link" href="">Active &middot; 5</a></div>
-          <div class="tab_item"><a class="tab_item__link" href="">Drafts &middot; 1</a></div>
-          <div class="tab_item"><a class="tab_item__link" href="">Recycle &middot; 1</a></div>
-        </div>
+      <div class="section_header section_header--assets">
+        <h1 class="h2 pull-left">Active assets</h1>
+        <button class="add_asset_btn btn pull-right"><i class="icon icon--add"></i> <span class="hidden-xs">New Asset</span></button>
       </div>
 
       <div class="assets_list_header">
-        <button class="assets_list_header__button btn"><i class="icon icon--add"></i> <span class="hidden-xs">New Asset</span></button>
-        <div class="assets_list_header__tags assets_list_tags">
-          <a href="" class="assets_list_tag assets_list_tag--active">All assets</a>
-          <a href="" class="assets_list_tag">
-            <span class="check check--gray"></span>
-            Unissued &middot; 1
-          </a>
-          <a href="" class="assets_list_tag">
-            <span class="check check--primary"></span>
-            Issued &middot; 1
-          </a>
-          <a href="" class="assets_list_tag">
-            <span class="check check--yellow"></span>
-            On review &middot; 1
-          </a>
-          <a href="" class="assets_list_tag">
-            <span class="check check--green"></span>
-            Tradable &middot; 1
-          </a>
+        <div class="nav_scroll">
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#info" aria-controls="info" role="tab" data-toggle="tab">All assets</a></li>
+            <li role="presentation"><a href="#participants" aria-controls="participants" role="tab" data-toggle="tab">Unissued <span class="check check--gray">1</span></a></li>
+            <li role="presentation"><a href="#comments" aria-controls="comments" role="tab" data-toggle="tab">Issued <span class="check check--primary">1</span></a></li>
+            <li role="presentation"><a href="#results" aria-controls="results" role="tab" data-toggle="tab">On review <span class="check check--yellow">2</span></a></li>
+            <li role="presentation"><a href="#winner" aria-controls="winner" role="tab" data-toggle="tab">Tradable <span class="check check--green">2</span></a></li>
+          </ul>
+
+          <!--<div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="info">1</div>
+            <div role="tabpanel" class="tab-pane" id="participants">2</div>
+          </div>-->
         </div>
+
       </div>
 
       <div class="assets_list">
@@ -315,6 +310,8 @@
                 <a href="" class="action_link">View details</a>
                 &middot;
                 <a href="" class="action_link">Issue coins</a>
+                &middot;
+                <a href="" class="action_link">Coinholders</a>
               </div>
             </div>
           </div>
@@ -421,6 +418,12 @@
                 <a href="" class="action_link">View details</a>
                 &middot;
                 <a href="" class="action_link">Issue coins</a>
+                &middot;
+                <a href="" class="action_link">Make tradable</a>
+                &middot;
+                <a href="" class="action_link">Coinholders</a>
+                &middot;
+                <a href="" class="action_link">Transactions</a>
               </div>
             </div>
           </div>

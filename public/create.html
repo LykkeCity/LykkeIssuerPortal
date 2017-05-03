@@ -124,8 +124,8 @@
       </div>
       <div class="header__logo header_logo">
         <a href="/">
-          <img class="header_logo__img" src="img/streams_logo.png" height="36" alt="lykke_logo">
-          <div class="header_logo__title">Streams</div>
+          <img class="header_logo__img" src="img/issuer_portal_logo.svg" height="36" alt="lykke_logo">
+          <div class="header_logo__title">Issuer<span>Portal</span></div>
         </a>
       </div>
       <div class="header__actions header_actions pull-right">
@@ -135,9 +135,10 @@
           </a>
         </div>
         <div class="header_actions__login header_login pull-right">
+
           <div class="header_user dropdown__control">
             <a href="/Home/SignIn">
-              <div class="header_login__title">Sign in</div>
+              <div class="header_login__title hidden-xs">Sign in</div>
 
               <!--<div class="header_user__img">
                 <img src="img/user_default.svg" width="40" alt="user_image">
@@ -154,16 +155,6 @@
           </div>
 
         </div>
-        <!-- <div class="header_actions__search">
-           <button class="btn btn&#45;&#45;icon" type="button">
-             <i class="icon icon&#45;&#45;search"></i>
-           </button>
-         </div>
-         <div class="header_actions__notifications">
-           <button class="btn btn&#45;&#45;icon" type="button">
-             <i class="icon icon&#45;&#45;notificaton"></i>
-           </button>
-         </div>-->
       </div>
     </div>
   </header>
@@ -185,7 +176,7 @@
   <section class="section">
     <div class="container">
       <div class="section_header">
-        <h1 class="h2 pull-left">My assets</h1>
+        <h1 class="h2 pull-left">New Asset</h1>
 
         <div class="card__actions">
           <span class="action_text">Last saved 2 minutes ago</span>
@@ -200,7 +191,7 @@
 
   <section class="section">
     <div class="create_asset">
-        <div class="step step--success">
+        <div class="step step--active step--success">
 
           <div class="step__header step_header">
             <div class="container">
@@ -274,7 +265,18 @@
 
                           <div class="row">
                             <div class="col-sm-6">
-                              <label for="select1" class="control-label">Divisibility <a href="#" class="help_hint btn btn--icon"><i class="icon icon--help_outline"></i></a></label>
+                              <label for="select1" class="control-label">
+                                Divisibility
+                                <a href="#"
+                                   class="help_hint btn btn--icon"
+                                   data-container="body"
+                                   data-toggle="popover"
+                                   data-placement="top"
+                                   data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                                  >
+                                  <i class="icon icon--help_outline"></i>
+                                </a>
+                              </label>
                               <div class="select form-group" data-control="select">
                                 <div class="select__value"><span class="_value">Indivisible</span></div>
                                 <select id="select1" class="form-control select__elem">
@@ -284,7 +286,18 @@
                               </div>
                             </div>
                             <div class="col-sm-6">
-                              <label for="select12" class="control-label">Asset type <a href="#" class="help_hint btn btn--icon"><i class="icon icon--help_outline"></i></a></label>
+                              <label for="select12" class="control-label">
+                                Asset type
+                                <a href="#"
+                                   class="help_hint btn btn--icon"
+                                   data-container="body"
+                                   data-toggle="popover"
+                                   data-placement="top"
+                                   data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                                  >
+                                  <i class="icon icon--help_outline"></i>
+                                </a>
+                              </label>
                               <div class="select form-group" data-control="select">
                                 <div class="select__value"><span class="_value">Currency</span></div>
                                 <select id="select12" class="form-control select__elem">
@@ -353,17 +366,6 @@
                             <div class="asset_link">
                               <div class="asset_link__action">
                                 <div class="fileupload">
-                                  <!--
-                                  <div class="fileupload_preview">
-                                    <div class="fileupload_preview__img">
-                                      <img src="http://lorempixel.com/40/40/" alt="fileupload_preview__img">
-                                    </div>
-                                    <div class="fileupload_preview__info">
-                                      <div class="fileupload_preview__title">designLKK-48.png</div>
-                                      <button class="btn btn--link" type="button">upload another file</button>
-                                    </div>
-                                  </div>
-                                  -->
                                   <div class="fileupload__control">
                                     <input type="file" id="file1" class="fileupload__field">
                                     <button type="button" class="btn btn-sm btn--default fileupload__btn">Upload image</button>
@@ -378,13 +380,35 @@
                             <div class="asset_link">
                               <div class="asset_link__action">
                                 <div class="fileupload">
-                                  <input type="file" id="file2" class="fileupload__field">
-                                  <button type="button" class="btn btn-sm btn--default">Upload image</button>
+                                  <div class="fileupload__control">
+                                    <input type="file" id="file2" class="fileupload__field">
+                                    <button type="button" class="btn btn-sm btn--default fileupload__btn">Upload image</button>
+                                  </div>
                                 </div>
                               </div>
                               <div class="asset_link__info">
                                 <div class="asset_link__title">Big resolution</div>
                                 <div class="asset_link__desc">260 × 260 px</div>
+                              </div>
+                            </div>
+                            <div class="asset_link">
+                              <div class="asset_link__action">
+                                <div class="fileupload">
+                                  <div class="fileupload_preview">
+                                    <div class="fileupload_preview__img">
+                                      <img src="http://lorempixel.com/80/80/" width="40" height="40" alt="fileupload_preview__img">
+                                    </div>
+                                    <div class="fileupload_preview__info">
+                                      <div class="fileupload_preview__title">designLKK-48.png</div>
+                                      <button class="btn btn--link fileupload__btn" type="button">upload another file</button>
+                                      <input type="file" id="file3" class="fileupload__field">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="asset_link__info">
+                                <div class="asset_link__title">Small resolution</div>
+                                <div class="asset_link__desc">48 × 48 px</div>
                               </div>
                             </div>
                           </div>
@@ -470,37 +494,8 @@
                   </div>
 
                   <div class="col-sm-7">
-
                     <div class="create_asset__main">
                       <form class="create_asset__form form form--default">
-                        <fieldset class="form_fieldset">
-                          <div class="form_header">
-                            <h5>How to confirm address</h5>
-                          </div>
-
-                          <ol>
-                            <li>
-                              <div class="li">Download the Lykke Wallet app from AppStore or GooglePlay:</div>
-
-                              <div class="apps">
-                                <div class="apps_apple"><a href="https://appsto.re/ru/Dwjvcb.i" target="_blank"><img src="img/appstore-badge.svg" alt="appstore" width="168"></a></div>
-                                <div class="apps_google"><a href="https://play.google.com/store/apps/details?id=com.lykkex.LykkeWallet" target="_blank"><img src="img/google-play.svg" alt="googleplay" width="168"></a></div>
-                              </div>
-                            </li>
-                            <li>
-                              <div class="li">Go in the Wallets tab and confirm latest address with name ‘Designers coins’.</div>
-                            </li>
-                            <li>
-                              <div class="li">And you can proceed to the next step in creating the asset.</div>
-                            </li>
-                          </ol>
-                        </fieldset>
-
-                        <div class="alert alert--green">
-                          <i class="icon icon--check_circle"></i>
-                          <div class="alert__text">The address has been successfully verified in the application</div>
-                        </div>
-
                         <fieldset class="form_fieldset">
                           <div class="form_header">
                             <h5>Generated data</h5>
@@ -513,7 +508,7 @@
                                 <div class="asset_link__desc">
                                   <div class="address_code">
                                     <div class="address_code__wrapper">
-                                      <span>2NAmtRw32LvymjsCx1Wdo8i42v49U6tHDEw</span>
+                                      <span>Waiting generation...</span>
                                       <button class="btn btn--icon copy_code" type="button" title="Copy code">
                                         <i class="icon icon--copy"></i>
                                       </button>
@@ -563,12 +558,16 @@
                               </div>
                             </div>
                           </div>
+
+                          <div class="form_fieldset__overlay">
+                            <button type="button" class="btn">Generate address</button>
+                          </div>
                         </fieldset>
 
                         <div class="form_submit">
                           <div class="row">
                             <div class="col-xs-12 col-sm-6 text-right pull-right">
-                              <button type="button" class="btn">Save Changes</button>
+                              <button type="button" class="btn" disabled>Next Step</button>
                             </div>
                           </div>
                         </div>
@@ -689,6 +688,11 @@
 
                               <div class="alert alert--red">
                                 <span class="icon icon--fail"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                <div class="alert__text">The address has been successfully verified in the application</div>
+                              </div>
+
+                              <div class="alert alert--green">
+                                <i class="icon icon--check_circle"></i>
                                 <div class="alert__text">The address has been successfully verified in the application</div>
                               </div>
                             </div>

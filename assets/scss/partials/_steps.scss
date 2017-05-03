@@ -1,5 +1,6 @@
 .step {
   @include rem(margin-top, -71px);
+  @include rem(margin-bottom, 10px);
 
   + .step {
     margin-top: 0;
@@ -14,8 +15,6 @@
     background: #f5f6f7;
 
     .step__wrapper {
-      border-bottom: 1px solid $border-alt;
-
       @include clearfix;
       @include rem(padding, 30px 0);
     }
@@ -27,7 +26,8 @@
         color: #b2b8bf;
         font-weight: $fw-semi;
 
-        @include rem(margin-top, 4px);
+        @include rem(margin-top, 7px);
+        @include rem(font-size, 18px);
       }
 
       ._hint {
@@ -185,19 +185,17 @@
 .create_asset {
   @include rem(margin-top, -35px);
 
-  &__form {
-
-  }
-
-  &__step {
-
-  }
-
   &__info {
     @include rem(margin-bottom, 10px);
 
+    h3, h4,
+    .h3, .h4 {
+      @include rem(margin-bottom, 10px);
+    }
+
     p {
       color: rgba($secondary, .8);
+      line-height: 1.6;
 
       @include rem(font-size, 16px);
       @include rem(margin-bottom, 10px);
@@ -205,10 +203,10 @@
   }
 
   &__main {
-    @include rem(padding-left, 35px);
+    @include rem(padding-left, 32px);
     @include rem(padding-right, 10px);
-    @include rem(padding-bottom, 75px);
-    @include rem(margin-top, -4px);
+    @include rem(padding-bottom, 65px);
+    @include rem(margin-top, -1px);
 
     ol {
       padding-left: 0;
@@ -282,6 +280,8 @@
       white-space:nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+
+      @include rem(margin-top, 4px);
     }
 
     a {

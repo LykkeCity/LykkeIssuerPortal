@@ -49,7 +49,7 @@
         white-space: nowrap;
 
         @include rem(font-size, 22px);
-        @include rem(margin-top, -2px);
+        @include rem(margin-top, 0px);
         @include rem(margin-bottom, 7px);
       }
     }
