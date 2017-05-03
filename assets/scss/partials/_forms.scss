@@ -324,3 +324,132 @@ textarea.form-control {
 .help_hint {
   color: #B2B8BF;
 }
+
+.btn_page_back {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  background: url(../img/back_icn.svg) no-repeat center !important;
+  width: 50px;
+  height: 20px;
+  z-index: 10;
+
+  @include background-size(30px 10px);
+
+  &:hover {
+    @include transform(translate(-5px, 0));
+  }
+
+  @media all and (max-width: $screen-landscape) {
+    display: none;
+  }
+}
+
+.form-horizontal {
+  .control-label {
+    font-weight: $fw-semi;
+    color: $secondary;
+
+    @include rem(font-size, 18px);
+  }
+
+  .form-control-feedback {
+    top: 50%;
+    color: rgba($secondary, .6);
+
+    @include rem(height, 34px);
+    @include rem(font-size, 16px);
+    @include rem(margin-top, -17px);
+  }
+
+  .form-group {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @media all and (min-width: $screen-landscape + 1) {
+    .control-label {
+      @include rem(padding-top, 16px);
+    }
+  }
+}
+
+.help-block {
+  line-height: 1.5;
+  color: $secondary;
+
+  @include rem(margin, -16px 0 20px 0);
+  @include rem(font-size, 16px);
+}
+
+.form_issue_coins {
+  .form-control-feedback {
+    width: auto;
+    line-height: normal;
+  }
+
+  .has-feedback {
+    .form-control {
+      @include rem(padding-right, 120px);
+    }
+  }
+
+  .form-control {
+    &[disabled]:not(.select__elem),
+    &.disabled,
+    &.form-control--disabled {
+      background: $white;
+    }
+  }
+
+  .form_fieldset {
+    border-bottom: 1px solid $border-alt;
+    border-top: 1px solid $border-alt;
+
+    @include rem(padding-bottom, 6px);
+    @include rem(padding-top, 30px);
+    @include rem(margin-bottom, 55px);
+  }
+
+  .form_submit {
+    .btn {
+      max-width: 100%;
+
+      @include rem(margin-bottom, 10px);
+      @include rem(width, 370px);
+    }
+  }
+}
+
+.select {
+  &--dropdown {
+    height: auto;
+
+    .select__label,
+    .select__value {
+      display: block;
+      padding: 0;
+    }
+
+    .select__value {
+      line-height: 1.35;
+      color: $secondary;
+
+      @include rem(font-size, 16px);
+    }
+
+    .select__label {
+      width: auto;
+      line-height: 1.5;
+      color: rgba($secondary, .6);
+
+      @include rem(font-size, 14px);
+    }
+  }
+
+  &.form-control {
+    @include rem(padding-top, 3px);
+    @include rem(padding-right, 45px);
+    @include rem(padding-bottom, 3px);
+  }
+}

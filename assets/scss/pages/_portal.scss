@@ -1,5 +1,5 @@
 .header {
-  border-bottom: 1px solid #eaedef;
+  border-bottom: 1px solid #F5F6F7;
 
   &__logo {
     img {
@@ -11,6 +11,10 @@
 
 .content {
   @include rem(padding-bottom, 65px);
+}
+
+.container {
+  position: relative;
 }
 
 .tab-pane {
@@ -688,4 +692,20 @@
 .popover {
   white-space: normal;
   text-align: left;
+}
+
+.text--red {
+  color: $red !important;
+}
+
+.text--green {
+  color: $green !important;
+}
+
+.label {
+  font-weight: $fw-semi !important;
+
+  &--text {
+    letter-spacing: 2.44px;
+  }
 }

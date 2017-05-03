@@ -30,6 +30,7 @@
 @import '../../node_modules/LykkeFramework/assets/scss/partials/flow';
 @import '../../node_modules/LykkeFramework/assets/scss/partials/alert';
 @import '../../node_modules/LykkeFramework/assets/scss/partials/popover';
+@import '../../node_modules/LykkeFramework/assets/scss/partials/dropdown-menu';
 
 // optional
 @import 'pages/portal';
@@ -37,3 +38,5 @@
 @import 'partials/forms';
 @import 'partials/modal';
 @import 'partials/steps';
+@import 'partials/dropdown';
+@import 'partials/small_block';
