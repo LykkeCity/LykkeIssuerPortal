@@ -34,4 +34,95 @@
   }
 
   &__body {}
+
+  &__button {
+    text-align: center;
+
+    @include rem(margin, 60px 0);
+
+    .btn {
+      @include rem(width, 210px);
+    }
+  }
+
+  &__icon {
+    @include rem(margin-bottom, 38px);
+
+    .icon {
+      margin-right: 0;
+
+      @include rem(font-size, 32px);
+      @include rem(line-height, 64px);
+
+      &--done {
+        @include rem(font-size, 24px);
+        @include rem(line-height, 68px);
+      }
+    }
+  }
+
+
+  .asset_link {
+    table-layout: fixed;
+    display: table;
+    width: 100%;
+
+    &:after,
+    &:before {
+      display: none;
+    }
+
+    &__icon {
+      @include rem(width, 64px);
+      @include rem(padding-right, 20px);
+    }
+
+    &__icon,
+    &__action,
+    &__info {
+      display: table-cell;
+      vertical-align: middle;
+      float: none;
+    }
+
+    &__title,
+    &__desc {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &__info {
+      @include rem(margin-bottom, 4px);
+    }
+
+    &__action {
+      text-align: center;
+
+      @include rem(width, 45px);
+      @include rem(padding-right, 20px);
+
+      .btn {
+        .icon {
+          @include rem(font-size, 24px)
+        }
+      }
+    }
+  }
+
+  &--message {
+    padding: 5% 0;
+    padding: 2vH 0;
+
+    .small_block__header {
+      @include rem(margin-bottom, 60px);
+
+      .page__title {
+        span {
+          @include rem(margin-top, 20px);
+          @include rem(font-size, 36px);
+        }
+      }
+    }
+  }
 }
