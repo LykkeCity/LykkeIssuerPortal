@@ -48,6 +48,12 @@
   &__icon {
     @include rem(margin-bottom, 38px);
 
+    img {
+      width: auto;
+
+      @include rem(height, 64px);
+    }
+
     .icon {
       margin-right: 0;
 
